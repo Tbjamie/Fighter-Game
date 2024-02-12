@@ -1,0 +1,55 @@
+Bronnen: 
+
+Fonts:
+
+Debug: https://www.fontspace.com/debug-font-f53756
+Plaguard: https://www.fontspace.com/plaguard-font-f56402
+Dragon Hunter: https://www.fontspace.com/dragon-hunter-font-f92096
+
+Audio:
+
+Punch SFX: https://pixabay.com/sound-effects/punch-41105/
+Strong Punch SFX: https://www.youtube.com/watch?v=iQLORgbwfJA
+Super Attack SFX: https://www.youtube.com/watch?v=5nKU4QK2fw4
+Win SFX: https://www.youtube.com/watch?v=sg763OgGdqI
+Lose SFX: https://pixabay.com/sound-effects/braam-classic-satellite-g-cinematic-trailer-sound-effects-123877/
+End Music SFX: https://pixabay.com/sound-effects/japanese-cinematic-percussion-1-115633/
+
+Code:
+
+Location.reload(): https://www.w3schools.com/jsref/met_loc_reload.asp
+Functie stoppen van uitvoeren: https://stackoverflow.com/questions/3536055/stopping-a-javascript-function-when-a-certain-condition-is-met
+Timer: https://codepen.io/falak786/pen/oddYYd
+
+
+Hulpbronnen:
+
+Audio: https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio
+Reload Page: https://www.w3schools.com/jsref/met_loc_reload.asp
+
+Maps:
+
+Map 1: https://in.pinterest.com/pin/330099847696588903/ 
+Map 2: https://www.gematsu.com/2018/12/jump-force-marineford-stage-screenshots 
+Final map: https://www.pinterest.com/pin/567735096752672712/
+
+Characters:
+
+Naruto: https://www.deviantart.com/maxiuchiha22/art/Naruto-Uzumaki-render-3-Ultimate-Ninja-Blazing-768052448 
+Kaneki: https://www.pngkey.com/detail/u2w7w7e6q8w7q8w7_ken-tokyo-ghoul-fan-kaneki-ken-no-background/
+Gojo: https://jujutsu-kaisen.fandom.com/wiki/Category:Satoru_Gojo_Images
+Naruto from the back: https://www.transparentpng.com/details/ninja-nassau-weekly-picture_28300.html
+Kaneki from the back: https://eyanhowlader.artstation.com/projects/qA2gP2
+
+Enemy:
+
+Kaido: https://static.wikia.nocookie.net/five-world-war/images/a/a5/Kaidoh.png/revision/latest/scale-to-width-down/699?cb=20200510051032
+Akaza: https://kimetsu-no-yaiba.fandom.com/wiki/Akaza/Image_Gallery#Profile
+Blackbeard: https://www.deviantart.com/hobbj/art/RENDER-Marshall-D-Teach-858839892
+
+Trophy: https://gifer.com/en/XqyT
+
+Check: https://www.flaticon.com/free-icon/check_1828743?term=check&page=1&position=9&origin=search&related_id=1828743
+Close: https://www.flaticon.com/free-icon/close_1828778?term=close&page=1&position=4&origin=search&related_id=1828778
+Coin: https://www.flaticon.com/free-icon/dollar_1490904?term=coin&related_id=1490904
+Power Up: https://cdn.vectorstock.com/i/preview-1x/80/73/power-lightning-logo-icon-vector-20788073.webp

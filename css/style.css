@@ -1,0 +1,616 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* fonts */
+
+@font-face {
+    font-family: debug;
+    src: url(../fonts/debug-font/DebugFreeTrial-MVdYB.otf);
+}
+
+@font-face {
+    font-family: plaguard;
+    src: url(../fonts/plaguard-font/Plaguard-ZVnjx.otf);
+}
+
+@font-face {
+    font-family: dragon-hunter;
+    src: url(../fonts/dragon-hunter-font/DragonHunter-9Ynxj.otf);
+}
+
+:root {
+    --blue: #2D9BF0;
+    --orange: #EB7404;
+    --greenblue: #0CA789;
+    --green: #8FD14F;
+    --red: #C83400;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#home body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/map3.png");
+    background-position: center;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+/********************/
+/********************/
+/**** MAP SELECT ****/
+/********************/
+/********************/
+
+#home section:first-of-type {
+    width: 100vw;
+    height: 35vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#home section:first-of-type article {
+    width: 15vw;
+    height: 25vh;
+    background-color: var(--greenblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home section:first-of-type article img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+}
+
+/********************/
+/********************/
+/* CHARACTER SELECT */
+/********************/
+/********************/
+
+#home section:nth-of-type(2) {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#home section:nth-of-type(2) article {
+    width: 20vw;
+    height: 35vh;
+    background-color: var(--greenblue);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#home section:nth-of-type(2) article img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    margin-top: -2.5em;
+}
+
+#home section:nth-of-type(2) article p {
+    color: white;
+    font-size: 2.25em;
+    text-align: center;
+    margin-top: .5em;
+}
+
+/********************/
+/********************/
+/*** LEVEL SELECT ***/
+/********************/
+/********************/
+
+/* section:last-of-type {
+    width: 100vw;
+    height: 15vh;
+} */
+
+
+/********************/
+/********************/
+/******* GAME *******/
+/********************/
+/********************/
+
+/* LEVEL 1 */
+
+#game {
+    background-color: hotpink;
+    background-image: url("../images/map3.png");
+    background-size: 100vw 100vh;
+}
+
+#game header {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#game header img {
+    width: 8.8em;
+    position: absolute;
+}
+
+#game header #timer {
+    position: absolute;
+    z-index: 1;
+    top: 1.75em;
+    font-size: 2em;
+    text-align: center;
+    font-family: 'plaguard', Arial, Helvetica, sans-serif;
+    cursor: default;
+}
+
+#game header section {
+    display: flex;
+    justify-content: center;
+}
+
+#game progress {
+    border: solid 3px white;
+    width: 40vw;
+    height: 8vh;
+}
+
+#health {
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+#game progress::-webkit-progress-bar {
+    background: transparent;
+}
+
+#game progress::-webkit-progress-value {
+    background-color: var(--green);
+}
+
+#game header section:nth-of-type(2) progress::-webkit-progress-value {
+    background-color: var(--greenblue);
+}
+
+#game header section:nth-of-type(2) progress {
+    transform: skew(30deg) rotate(180deg);
+    width: 20vw;
+    z-index: -1;
+}
+
+#game header section:nth-of-type(2) progress:last-of-type {
+    transform: skew(-30deg) rotate(0deg);
+}
+
+#game main {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#game main h1 {
+    font-size: 10em;
+    position: absolute;
+    top: 1.5em;
+    color: white;
+    text-transform: uppercase;
+    display: none;
+    font-family: 'dragon-hunter', Arial, Helvetica, sans-serif;
+    cursor: default;
+    left: 2.15em;
+}
+
+#game main section:first-of-type img {
+    width: 12vw;
+    position: absolute;
+    z-index: -1;
+    left: 15em;
+    bottom: 0;
+}
+
+.attackanimation {
+    animation: attackanimation 400ms;
+}
+
+.enemyattackanimation {
+    animation: delayedattackanimation 400ms;
+}
+
+@keyframes attackanimation {
+    0%{
+      transform: translateX(0)
+    }
+    
+    50%{
+     transform: translateX(3em)
+    }
+    
+    100%{
+      transform: translateX(0)
+    }
+}
+
+@keyframes delayedattackanimation {
+    0%{
+      transform: translateX(0)
+    }
+    
+    50%{
+     transform: translateX(3em)
+    }
+    
+    100%{
+      transform: translateX(0)
+    }
+}
+
+#game main section:nth-of-type(2) img {
+    width: 12vw;
+    position: absolute;
+    z-index: -1;
+    right: 15em;
+    bottom: 6.5em;
+}
+
+.damageanimation {
+    animation: damageanimation 500ms;
+    animation-delay: 250ms;
+}
+
+.owndamageanimation {
+    animation: delayeddamageanimation 500ms;
+    animation-delay: .35s;
+}
+
+@keyframes damageanimation {
+    0% {
+      opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+       }
+    
+    50% {
+     opacity: 1;
+    }
+
+    75% {
+        opacity: 0;
+    }
+    
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes delayeddamageanimation {
+    0% {
+      opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+       }
+    
+    50% {
+     opacity: 1;
+    }
+
+    75% {
+        opacity: 0;
+    }
+    
+    100% {
+      opacity: 1;
+    }
+}
+
+#game section:nth-of-type(3) {
+    width: 100vw;
+    bottom: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: -1;
+}
+
+#game main section:nth-of-type(3) button {
+    margin: 1em;
+    font-size: 1em;
+    display: none;
+    cursor: pointer;
+    background-color: #0CA789;
+    position: relative;
+    max-height: 5em;
+}
+
+#game main section:nth-of-type(3) button:hover {
+    background: linear-gradient(45deg, #0CA789, #2F4858);
+	background-size: 800% 800%;
+	animation: gradientanimation 5s ease infinite;
+	height: 100vh;
+}
+
+.buttonhoveranimation {
+    background: linear-gradient(45deg, #EB7404, #2F4858);
+	background-size: 800% 800%;
+	animation: gradientanimation 5s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradientanimation {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+    }
+}
+
+
+#game main ul {
+    list-style: none;
+    columns: 2;
+    margin-bottom: 4em;
+    margin-left: 20em;
+}
+
+#game button {
+    width: 20em;
+    height: 5em;
+    background-color: var(--greenblue);
+    border: solid 3px white;
+    margin-top: 1em;
+    font-family: 'plaguard', Arial, Helvetica, sans-serif;
+    text-align: center;
+    cursor: pointer;
+}
+
+#game ul li:nth-of-type(2) button {
+    cursor: auto;
+}
+
+#game ul li:nth-of-type(2) button:disabled {
+    color: black;
+    background: lightslategray;
+    cursor: auto;
+}
+
+#game ul li:nth-of-type(4) button {
+    background: var(--greenblue);
+    cursor: auto;
+}
+
+#game ul li:nth-of-type(4) button:disabled {
+    color: black;
+    background: lightslategray;
+    cursor: auto;
+}
+
+#game .endscreen {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 10em;
+}
+
+#game .trophy {
+    display: none;
+    position: absolute;
+    bottom: 6em;
+    width: 25vw;
+    animation-name: invliegenonder;
+    animation-duration: 3s;
+}
+
+@keyframes invliegenonder {
+    0% {
+        transform: translateY(100em);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* STORE */
+
+#game .storesection {
+    width: 70vw;
+    height: 80vh;
+    background: linear-gradient(180deg, #878EA7, #3E3131);
+    position: absolute;
+    bottom: 4em; 
+    z-index: 5;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#game .storesection img {
+    width: 2em;
+    height: 2em;
+    margin-top: 3em;
+}
+
+#game .storesection .topstorediv img:first-of-type {
+    position: absolute;
+    left: 5em;
+    cursor: pointer;
+}
+
+#game .storesection .topstorediv img:last-of-type {
+    width: 2.5em;
+    height: 2.5em;
+    position: absolute;
+    right: 7.5em;
+}
+
+#game .storesection .topstorediv p {
+    font-size: 2em;
+    font-family: 'plaguard', Arial, Helvetica, sans-serif;
+    color: white;
+    position: absolute;
+    right: 2em;
+    margin-top: 1.75em;
+}
+
+#game .storesection div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#game .storesection h2 {
+    margin-top: 1em;
+    font-family: 'plaguard', Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    color: white;
+}
+
+#game .storesection article {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: -3em;
+}
+
+#game .storesection article div {
+    background-color: white;
+    border-radius: 20px;
+    width: 25%;
+    height: 20em;
+    position: relative;
+}
+
+#game .storesection article div:first-of-type {
+    border: solid 6px var(--green);
+}
+
+#game .storesection article div p {
+    position: absolute;
+    bottom: .25em;
+    left: 2.25em;
+    font-size: 2em;
+    font-family: 'plaguard', Arial, Helvetica, sans-serif;
+    color: white;
+    z-index: 1;
+}
+
+#game .storesection article div:last-of-type p {
+    left: 1.75em;
+}
+
+#game .storesection article div img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#game .purchasebutton {
+    background-color: var(--green);
+    border: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 10em;
+    color: white;
+}
+
+#game .purchasebutton:nth-of-type(2) {
+    color: red;
+}
+
+#game .purchasebutton:last-of-type {
+    color: red;
+}
+
+#game .purchasebutton span {
+    font-size: 2em;
+    margin-left: .5em;
+}
+
+#game .purchasebutton img {
+    width: 20%;
+    margin-left: 1em;
+    margin-top: 0;
+}
+
+#game .storesection .buttondiv .purchasebutton:first-of-type {
+    margin-right: 8em;
+    margin-left: 4em;
+}
+
+#game .storesection .buttondiv .purchasebutton:nth-of-type(2) {
+    margin-right: 8em;
+}
+
+#game .storesection .buttondiv .purchasebutton:nth-of-type(2) img:last-of-type {
+    display: none;
+}
+
+#game .storesection .buttondiv .purchasebutton:last-of-type {
+    margin-right: 4em;
+}
+
+#game .storesection .buttondiv .purchasebutton:last-of-type img:last-of-type {
+    display: none;
+}
+
+#game .storesection .buttondiv {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 7em;
+    margin-right: 7em;
+}
+
+#game .storesection article div .cardshadow {
+    width: 100%;
+    height: 20%;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    border: none;
+    opacity: 50%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+#game .storesection article div:first-of-type .cardshadow {
+    border-radius: 10px;
+}
+
+#game .backgroundfilter {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    opacity: 50%;
+    display: none;
+}

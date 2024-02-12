@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body id="game">
+
+        <header>
+    
+            <div id="timer">1:00</div>
+            <img class="timebar" src="./images/timebar.png" alt="time">
+    
+            <section>
+                <progress id="health" value="100" max="100"></progress>
+                <progress id="enemyhealth" value="100" max="100"></progress>
+            </section>
+    
+            <section>
+                <progress id="chargebar" value="0" max="50"></progress>
+                <progress id="enemychargebar" value="0" max="50"></progress>
+            </section>
+        </header>
+    
+        <main>
+    
+    
+            <h1 class="gameend">You ...</h1>
+    
+            <section>
+                <img src="./images/narutofromback.png" alt="Your character">
+            </section>
+            <section>
+                <img src="./images/blackbeardop.png" alt="Enemy character">
+            </section>
+    
+            <section>
+                <button class="storebutton">Store</button>
+                <button class="nextlevelbutton">Next Level</button>
+            </section>
+
+            <section class="storesection">
+                <div class="topstorediv">
+                    <img class="closestore" src="./images/close-2.png" alt="Close">
+                    <h2>STORE</h2>
+                    <img src="./images/coin.png" alt="coin">
+                    <p>0</p>
+                </div>
+                <article>
+                    <div>
+                        <img src="./images/character1.png" alt="Optional character">
+                        <p>Naruto</p>
+                        <div class="cardshadow"></div>
+                    </div>
+                    <div>
+                        <img src="./images/character2.png" alt="Optional character">
+                        <p>Kaneki</p>
+                        <div class="cardshadow"></div>
+                    </div>
+                    <div>
+                        <img src="./images/powerup.png" alt="Optional character">
+                        <p>Power Up</p>
+                        <div class="cardshadow"></div>
+                    </div>
+                </article>
+                    <div class="buttondiv">
+                        <button class="purchasebutton"><img src="./images/coin.png" alt="coin"><img src="./images/check-2.png" alt="check"></button>
+                        <button class="purchasebutton"><img src="./images/coin.png" alt="coin"><img src="./images/check-2.png" alt="check"><span>150</span></button>
+                        <button class="purchasebutton"><img src="./images/coin.png" alt="coin"><img src="./images/check-2.png" alt="check"><span>400</span></button>
+                    </div>
+            </section>
+
+            <div class="backgroundfilter"></div>
+    
+            <ul class="attackbuttonlist">
+                <li><button class="attack1">Rasengan</button></li>
+                <li><button class="attack3">Kirin</button></li>
+                <li><button class="attack2">Chibaku Tensei</button></li>
+                <li><button class="attack4">Rasenshuriken</button></li>
+            </ul>
+
+            <img class="trophy" src="./images/trophy.gif" alt="Trophy">
+        </main>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
